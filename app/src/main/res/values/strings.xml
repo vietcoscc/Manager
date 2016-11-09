@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Manager</string>
+    <string name="login">Login</string>
+    <string name="userNameHint">User Name ...</string>
+    <string name="PasswordHint">Password ...</string>
+    <string name="remember">remember this?</string>
+    <string name="checkBox">Remember me</string>
+</resources>
