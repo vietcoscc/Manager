@@ -5,6 +5,8 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private String password;
     private ListView lvSearch;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         initData();
         initViews();
     }
+    @RequiresApi(api = Build.VERSION_CODES.M)
     public void requestPermissions() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             String s[] = {Manifest.permission.CALL_PHONE};
